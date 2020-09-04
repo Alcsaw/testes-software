@@ -3,3 +3,5 @@
 
 # tests coverage report
 /__tests__/coverage
+# logs
+*.log
