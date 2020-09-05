@@ -11,11 +11,8 @@
 
 class Conversion {
   getIntegersFromCSV(csv: string) {
-    //let integers = Array<number>();
-
     const array = csv.split(',').map(Number);
     const arrayIntegers = array.filter(item => Number.isInteger(item));
-    console.log(arrayIntegers);
 
     return arrayIntegers;
   }
