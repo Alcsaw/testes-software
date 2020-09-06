@@ -17,13 +17,31 @@
 import randomIntFromInterval from '../utils/randomIntFromInterval';
 
 class Ordination {
+
+  array = this.generateRandomArray();
+
   generateRandomArray() {
     const length = randomIntFromInterval(4, 10);
 
     const array = Array.from(Array(length)).map(x => randomIntFromInterval(10000, 99999))
-    console.log(array);
 
     return array;
+  }
+
+  orderArray(array: number[] = this.array) {
+
+    if (array.length < 4 || array.length > 10) {
+      return 0;
+    }
+
+    if (array.some(item => item.toString().length !== 5)) {
+      return 0;
+    }
+
+    const orderedArray = array.sort((a, b) => a - b);
+    this.array = orderedArray;
+
+    return 1;
   }
 }
 
