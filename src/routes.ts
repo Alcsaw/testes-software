@@ -1,10 +1,17 @@
 import express from 'express';
 
+import Ordination from './Lesson2/Ordination';
+
 const routes = express.Router();
 
-routes.get('/lesson1', (req, res) => {
-  console.log("1");
-  res.send("1");
+const ordination = new Ordination();
+
+routes.get('/orderArray', (req, res) => {
+  if (ordination.orderArray()) {
+    res.send(ordination.array);
+  } else {
+    res.send("Error while atempting to order array");
+  }
 });
 
 export default routes;
