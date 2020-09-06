@@ -1,5 +1,5 @@
 {
-  "name": "aula2",
+  "name": "testes-software",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --ignore-watch __tests__ --respawn src/index.ts",
-    "start": "node src/index.ts",
+    "start": "ts-node src/index.ts",
     "test": "jest"
   },
   "dependencies": {
